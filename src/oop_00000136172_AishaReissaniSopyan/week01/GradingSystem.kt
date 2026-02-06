@@ -4,7 +4,7 @@ fun main(){
     val name = "Aisha Reissani"
     val score = 80
 
-    printIn("Nama: $name, Nilai: $score")
+    println("Nama: $name, Nilai: $score")
 
     val grade = when (score) {
         in 90 .. 100 -> "A"
@@ -13,9 +13,15 @@ fun main(){
         else -> "D"
     }
 
-    printIn("Grade kamu: $grade")
+    println("Grade kamu: $grade")
 
-    printIn("Status: ${calculateStatus(score)}")
+    println("Status: ${calculateStatus(score)}")
+
+    val studentId: String? = null
+
+    val idLegth = studentId?.length ?: 0
+
+    println("Panjang ID: $idLegth")
 }
 
 fun calculateStatus(score: Int) = if (score > 75) "Lulus" else "Tidak lulus"
