@@ -1,5 +1,7 @@
 package oop_00000136172_AishaReissaniSopyan.week02
 
+import oop_00000136172_AishaReissaniSopyan.week02.Student
+
 class Hero(
     val name: String,
     var hp : Int = 100,
@@ -20,4 +22,5 @@ class Hero(
     fun isAlive(): Boolean{
         return hp > 0
     }
+
 }
