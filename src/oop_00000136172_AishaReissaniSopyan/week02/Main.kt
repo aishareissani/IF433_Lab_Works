@@ -20,11 +20,7 @@ fun main(){
         print("Masukkan Jurusan: ")
         val major = scanner.nextLine()
 
-        print("Masukkan GPA: ")
-        val gpa = scanner.nextDouble()
-
-        val s1 = Student(name, nim, major, gpa)
+        val s1 = Student(name, nim, major)
         println("Status: Pendaftaran Selesai.")
     }
-
 }
