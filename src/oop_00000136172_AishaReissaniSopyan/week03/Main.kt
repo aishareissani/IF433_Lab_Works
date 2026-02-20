@@ -9,4 +9,9 @@ fun main(){
     e.increasePerformance()
 
     println("Pajak yang harus dibayar: ${e.tax}")
+
+    val weapon = Weapon("Aisha")
+    weapon.damage = -50
+
+    println("Tier: ${weapon.tier}")
 }
