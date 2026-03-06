@@ -22,4 +22,14 @@ fun main(){
         }
         println("----------------------------")
     }
+
+    val sisi = hitungLuas(10)
+    val panjangLebar = hitungLuas(10, 20)
+    val jariJari = hitungLuas(7.4)
+
+    println("Luas: $sisi")
+    println("Luas (panjang * lebar): $panjangLebar")
+    println("Jari-jari: $jariJari")
+
+
 }
