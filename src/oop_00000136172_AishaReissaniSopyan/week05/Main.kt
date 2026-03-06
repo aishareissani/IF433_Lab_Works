@@ -29,5 +29,4 @@ fun main(){
     println("Luas (panjang * lebar): ${mathhelper.hitungLuas(10, 30)}")
     println("Jari-jari: ${mathhelper.hitungLuas(7.5)}")
 
-
 }
