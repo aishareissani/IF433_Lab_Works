@@ -23,5 +23,11 @@ fun main(){
         println("----------------------------")
     }
 
+    val mathhelper = MathHelper()
+
+    println("Luas (sisi * sisi): ${mathhelper.hitungLuas(10)}")
+    println("Luas (panjang * lebar): ${mathhelper.hitungLuas(10, 30)}")
+    println("Jari-jari: ${mathhelper.hitungLuas(7.5)}")
+
 
 }
