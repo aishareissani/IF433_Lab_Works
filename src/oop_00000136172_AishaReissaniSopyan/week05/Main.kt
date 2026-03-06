@@ -24,9 +24,23 @@ fun main(){
     }
 
     val mathhelper = MathHelper()
-
     println("Luas (sisi * sisi): ${mathhelper.hitungLuas(10)}")
     println("Luas (panjang * lebar): ${mathhelper.hitungLuas(10, 30)}")
     println("Jari-jari: ${mathhelper.hitungLuas(7.5)}")
+
+    println("=== AKTIVITAS PEMBAYARAN ===")
+
+    val ewallet = EWallet("Aisha", 50000.0)
+    val credit = CreditCard("Aishaa", 100000.0)
+
+    val metodePayment: List<PaymentMethod> = listOf(ewallet, credit)
+
+    for(payment in metodePayment){
+        payment.processPayment(75000.0)
+    }
+
+
+
+
 
 }
