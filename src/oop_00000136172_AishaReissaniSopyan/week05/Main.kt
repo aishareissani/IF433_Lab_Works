@@ -28,7 +28,7 @@ fun main(){
     println("Luas (panjang * lebar): ${mathhelper.hitungLuas(10, 30)}")
     println("Jari-jari: ${mathhelper.hitungLuas(7.5)}")
 
-    println("=== AKTIVITAS PEMBAYARAN ===")
+    println("\n=== AKTIVITAS PEMBAYARAN ===")
 
     val ewallet = EWallet("Aisha", 50000.0)
     val credit = CreditCard("Aishaa", 100000.0)
@@ -37,10 +37,13 @@ fun main(){
 
     for(payment in metodePayment){
         payment.processPayment(75000.0)
+
+        when(payment){
+            is EWallet -> {
+                payment.topUp(50000.0)
+                println("Setelah top-up:")
+                payment.processPayment(75000.0)
+            }
+        }
     }
-
-
-
-
-
 }
