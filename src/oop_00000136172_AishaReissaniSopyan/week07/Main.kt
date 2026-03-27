@@ -35,6 +35,8 @@ fun main(){
         is ApiResponse.Success -> "Tampilkan: ${response.data}"
         is ApiResponse.Error -> "Tampilkan: ${response.message}"
     }
-
     println(uiMessage)
+
+    GameManager.startGame()
+    GameManager.startGame()
 }
