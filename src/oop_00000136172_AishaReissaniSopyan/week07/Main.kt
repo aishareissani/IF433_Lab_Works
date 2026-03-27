@@ -37,6 +37,12 @@ fun main(){
     }
     println(uiMessage)
 
+    println("\n=== TEST GAME ===")
     GameManager.startGame()
     GameManager.startGame()
+
+    println("\nDrop Chance Item Rarity Legendary: ${ItemRarity.LEGENDARY.dropChance}")
+
+    val weapon = Weapon.forgeStarterSword()
+    println("Nama Senjata: ${weapon.item.name}, Damage: ${weapon.item.damage}, Rarity: ${weapon.item.rarity}\n")
 }
