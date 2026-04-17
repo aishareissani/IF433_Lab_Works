@@ -54,4 +54,6 @@ fun main(){
     }catch(e: IllegalArgumentException){
         println(e.message)
     }
+
+    runMockUnitTest()
 }
