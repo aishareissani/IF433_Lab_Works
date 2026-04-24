@@ -17,7 +17,7 @@ fun main(){
     val activeUsers = mutableSetOf("UserA", "UserB")
     activeUsers.add("UserC")
     activeUsers.add("UserA")
-    println("Active Users: $activeUsers")
+    println("Active users: $activeUsers")
 
     println("\n=== TEST MAP ===")
     val studentGrades = mapOf(
