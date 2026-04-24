@@ -32,7 +32,7 @@ fun main(){
         .sortedBy { it.roe }
         .map{ "LOSS [${it.pair} - ${it.position}]: ${it.roe}% ROE (Lev: ${it.leverage}x)" }
 
-    println("\n=== SET ===")
+    println("\n=== Set ===")
     val uniquePairs = tradeHistory
         .map { it.pair }
         .toSet()
