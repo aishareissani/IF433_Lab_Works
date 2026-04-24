@@ -17,4 +17,8 @@ fun main(){
     println("\n=== HOF: FILTER WINNING TRADES ===")
     val winningTrades = closedTrades.filter { it.roe > 0 }
     println("ROE > 0 only: $winningTrades")
+
+    println("\n=== HOF: FILTER LOSING TRADES ===")
+    val losingTrades = closedTrades.filter { it.roe <= 0 }
+    println("ROE <= 0 only: $losingTrades")
 }
