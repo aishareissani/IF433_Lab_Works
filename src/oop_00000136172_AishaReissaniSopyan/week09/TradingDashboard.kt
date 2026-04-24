@@ -22,12 +22,21 @@ fun main(){
     val losingTrades = closedTrades.filter { it.roe <= 0 }
     println("ROE <= 0 only: $losingTrades")
 
-    println("\n=== SORTING AND MAPPING ===")
+    println("\n=== SORTING AND MAPPING KOIN PROFIT TERTINGGI ===")
     val topPerformersString = winningTrades
         .sortedByDescending { it.roe }
-        .map{ "WIN [${it.pair} - ${it.position}]: +${it.roe}% ROE (Lev: ${it.leverage})" }
+        .map{ "WIN [${it.pair} - ${it.position}]: +${it.roe}% ROE (Lev: ${it.leverage}x)" }
 
     topPerformersString.forEach {
+        println(it)
+    }
+
+    println("\n=== SORTING AND MAPPING KOIN LOSS ===")
+    val worstPerformersString = losingTrades
+        .sortedBy { it.roe }
+        .map{ "LOSS [${it.pair} - ${it.position}]: ${it.roe}% ROE (Lev: ${it.leverage}x)" }
+
+    worstPerformersString.forEach {
         println(it)
     }
 }
