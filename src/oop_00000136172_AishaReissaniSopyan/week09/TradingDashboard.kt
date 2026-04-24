@@ -27,10 +27,6 @@ fun main(){
         .sortedByDescending { it.roe }
         .map{ "WIN [${it.pair} - ${it.position}]: +${it.roe}% ROE (Lev: ${it.leverage}x)" }
 
-    topPerformersString.forEach {
-        println(it)
-    }
-
     println("\n=== SORTING AND MAPPING KOIN LOSS ===")
     val worstPerformersString = losingTrades
         .sortedBy { it.roe }
@@ -48,4 +44,10 @@ fun main(){
     uniquePairs.forEach {
         println(it)
     }
+
+    println("\n=== CRYPTO TRADING DASHBOARD ===")
+    topPerformersString.forEach {
+        println(it)
+    }
+
 }
