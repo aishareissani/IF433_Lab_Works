@@ -13,4 +13,8 @@ fun main(){
     println("\n=== HOF: FILTER TRADE HISTORY ===")
     val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
     println("Status CLOSED only: $closedTrades")
+
+    println("\n=== HOF: FILTER WINNING TRADES ===")
+    val winningTrades = closedTrades.filter { it.roe > 0 }
+    println("ROE > 0 only: $winningTrades")
 }
