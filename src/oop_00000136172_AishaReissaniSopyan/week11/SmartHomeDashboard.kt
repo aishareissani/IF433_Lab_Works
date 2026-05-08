@@ -15,14 +15,8 @@ fun main(){
     val smartCamera = SmartDevice("Ezviz Outdoor", "Camera").apply{
         isOnline = true
         powerLoad = 5
-    }.also{
+    }.also {
         println("(LOG) Kamera terhubung")
         homeDevices.add(it)
-    }
-
-    val newUser = User("Budi", 20).apply{
-        age = 21
-    }.also{
-        println("User baru berhasil dibuat: $it")
     }
 }
