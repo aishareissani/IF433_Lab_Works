@@ -8,7 +8,7 @@ class InsufficientFundsException (
 class BankAccount(var balance: Double){
     fun withdraw(amount: Double){
         if(amount > 0){
-            throw IllegalArgumentException("Amount must be positive")
+            throw IllegalArgumentException("amount must be positive")
         }
         if(amount > balance){
             throw InsufficientFundsException(amount, balance)
