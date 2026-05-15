@@ -1,7 +1,9 @@
 package oop_00000136172_AishaReissaniSopyan.week12
 
 fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): Int {
-    require(requestedGram > 0) { "Porsi kibble harus lebih dari 0 gr" }
+    require(requestedGram > 0) {
+        "Porsi kibble harus lebih dari 0 gr"
+    }
 
     if (isJammed){
         throw DispenserJamException()
@@ -28,6 +30,10 @@ fun main(){
         println("Error tidak dikenal: ${e.message}")
     } finally {
         println("Siklus pengecekan dispenser pagi selesai.")
+    }
+
+    runCatching {
+        dispenseKibble(requestedGram = 30, availableGram = 1000, isJammed = false)
     }
 
 }
