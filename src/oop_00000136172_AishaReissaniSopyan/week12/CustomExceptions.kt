@@ -25,7 +25,7 @@ fun main(){
     try {
         account.withdraw(150.0)
     } catch(e: InsufficientFundsException){
-        println(message = "Caught Domain Error: Uang tidak cukup. ${e.message}")
+        println(message = "Caught Domain Error: uang tidak cukup. ${e.message}")
     } catch(e: IllegalArgumentException){
         println("Caught Argument Error: Input tidak valid. ${e.message}")
     } catch(e: Exception){
